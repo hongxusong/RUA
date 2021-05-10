@@ -14,12 +14,13 @@ import { Ionicons } from '@expo/vector-icons';
 
 class Login extends Component{
     static navigationOptions = {
-        title: 'HomePage',
+        title: 'homepage',
       };
     constructor(props){
       super(props)
       this.state={
-       
+         acc:'',
+         pwd:''
       }
       
     }
@@ -43,10 +44,16 @@ class Login extends Component{
            <SafeAreaView style={{flex:1,alignItems:'center'}}>
              <View style={{width:'100%',height:'100%',backgroundColor:'white'}}>
                  <View style={{height:'10%'}}></View>
-              <TextInput style={styles.in} />
-              <TextInput secureTextEntry style={[styles.in,{marginTop:20}]} />
+              <TextInput style={styles.in} placeholder='Name' onChangeText={(v)=>{
+                this.setState({acc:v})
+              }}/>
+              <TextInput secureTextEntry placeholder='PassWord' style={[styles.in,{marginTop:20}]}  onChangeText={(v)=>{
+                this.setState({pwd:v});
+              }}/>
               
               <TouchableOpacity onPress={()=>{
+                if(!this.state.acc){alert('Please enter the account number');return};
+                if(!this.state.pwd){alert('Please input a password');return};
                 //    this.props.navigation.navigate('HomePage');
                    this.props.navigation.reset({
                     index: 0,
@@ -79,7 +86,7 @@ const styles=StyleSheet.create({
     paddingBottom:10,
     paddingLeft:20,
     paddingRight:20,
-    backgroundColor:'black',
+    backgroundColor:'#00C2CC',
     
   },
   pd:{

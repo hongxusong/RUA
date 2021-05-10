@@ -14,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 class My extends Component{
     static navigationOptions = {
-        title: 'HomePage',
+        title: 'homepage',
       };
     constructor(props){
       super(props)
@@ -38,7 +38,7 @@ class My extends Component{
     render(){
     
        return(
-           <SafeAreaView style={{flex:1,alignItems:'center'}}>
+           <SafeAreaView style={{flex:1,alignItems:'center'}} >
               <View>
               <Text>my</Text>
               </View> 

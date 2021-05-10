@@ -14,6 +14,9 @@ import Reg from './app/home/Reg'
 import HomePage from './app/home/HomePage'
 import Add from './app/home/Add'
 import Chat from './app/home/Chat'
+import DiaoCha from './app/home/DiaoCha'
+import XueShen from './app/home/Xueshen'
+import Chat2 from './app/home/Chat2'
 import My from './app/my/My'
 import Homexq from './app/home/Homexq'
 // import tab  from './app/router'
@@ -36,10 +39,19 @@ export default function App() {
        <Stack.Screen name="Reg" component={Reg}  
         options={{ title: 'REGISTER' }}
        />
+       <Stack.Screen name="XueShen" component={XueShen}  
+        options={{ title: '' }}
+       />
        <Stack.Screen name="HomePage" component={HomePage}  
         options={{ title: '' }}
        />
+        <Stack.Screen name="Chat2" component={Chat2}  
+        options={{ title: 'CHAT' }}
+       />
        <Stack.Screen name="Add" component={Add}  
+        options={{ title: '' }}
+       />
+       <Stack.Screen name="DiaoCha" component={DiaoCha}  
         options={{ title: '' }}
        />
         <Stack.Screen name="Chat" component={Chat}  

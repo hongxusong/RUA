@@ -14,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 class Chat extends Component {
   static navigationOptions = {
-    title: 'HomePage',
+    title: 'homepage',
   };
   constructor(props) {
     super(props)

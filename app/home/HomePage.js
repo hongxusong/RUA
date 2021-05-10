@@ -14,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 class HomePage extends Component {
   static navigationOptions = {
-    title: 'HomePage',
+    title: 'homepage',
   };
   constructor(props) {
     super(props)
@@ -42,8 +42,8 @@ class HomePage extends Component {
     return (
       <SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
           <View style={[{padding:20},styles.bgc]}>
-            <Text style={{fontSize:25}}>Hi Charlotte,here`s your week </Text>
-          
+            <Text style={{fontSize:25,color:'#FFA170',fontWeight:'500'}}>How`s your week  </Text>
+            <Text style={{marginTop:10,color:'#FFA170'}}>click a ring to log communication</Text>
           <View style={[styles.center,{marginTop:20}]}>
               <Image source={require('../img/icon1.png')} style={styles.icon}/>
 
@@ -60,12 +60,12 @@ class HomePage extends Component {
         <Image source={require('../img/home.png')} resizeMode='contain' style={styles.btm_img}/> 
         <Image source={require('../img/sou.png')} resizeMode='contain' style={styles.btm_img}/> 
         <TouchableOpacity onPress={()=>{
-            this.props.navigation.navigate('Add');
+            this.props.navigation.navigate('DiaoCha');
         }}>
         <Image source={require('../img/add.png')} resizeMode='contain' style={[styles.btm_img,{width:60}]}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>{
-            this.props.navigation.navigate('Chat');
+            this.props.navigation.navigate('Chat2');
         }}>
         <Image source={require('../img/chat.png')} resizeMode='contain' style={styles.btm_img}/> 
         </TouchableOpacity>
